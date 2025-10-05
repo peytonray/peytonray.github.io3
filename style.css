@@ -1,0 +1,43 @@
+:root {
+  --body-font: "Times New Roman", Times, serif;
+  --bg-stone: rgba(232, 230, 227, 1);
+  --panel-bg: rgba(255, 255, 255, 0.95);
+  --accent: rgba(45, 85, 130, 0.95);
+  --text-color: #222;
+  --muted: #555;
+  --link-color: #0b5bd7;
+  --link-visited: #0b4fbf;
+}
+
+body {
+  background-color: var(--bg-stone);
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-image: url("../images/FBISEAL.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 400px;
+  background-attachment: fixed;
+}
+
+h1, h2, h3 {
+  color: var(--accent);
+}
+
+#links a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+#links a:visited {
+  color: var(--link-visited);
+}
+
+#links a:hover {
+  color: #083c9f;
+}
+
+footer {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
