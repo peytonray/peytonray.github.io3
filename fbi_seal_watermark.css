@@ -1,0 +1,87 @@
+:root {
+  --body-font: "Times New Roman", Times, serif;
+  --bg-stone: rgba(232, 230, 227, 1);
+  --panel-bg: rgba(255, 255, 255, 0.85);
+  --accent: rgba(45, 85, 130, 0.95);
+  --text-color: #222;
+  --muted: #555;
+  --link-color: #0b5bd7;
+  --link-visited: #0b4fbf;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--bg-stone);
+  position: relative;
+  z-index: 0;
+}
+
+/* Watermark-style FBI seal */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background-image: url("../images/FBISEAL.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* Panels */
+.panel {
+  background-color: var(--panel-bg);
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Headers */
+h1, h2, h3 {
+  color: var(--accent);
+}
+
+/* Links */
+#links a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+#links a:visited {
+  color: var(--link-visited);
+}
+
+#links a:hover {
+  color: #083c9f;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Responsive watermark */
+@media (max-width: 768px) {
+  body::before {
+    width: 250px;
+    height: 250px;
+    opacity: 0.1;
+  }
+}
+
+@media (max-width: 480px) {
+  body::before {
+    width: 150px;
+    height: 150px;
+    opacity: 0.08;
+  }
+}
